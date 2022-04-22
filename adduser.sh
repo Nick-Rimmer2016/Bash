@@ -21,10 +21,13 @@ echo "Checking if user exists..."
     # Create key pair
     ssh-keygen -t rsa -b 2048 -f /home/$username/.ssh/id_rsa -N ''
     # Copy Private Key
-    # sudo mv /home/$username/.ssh/id_rsa  /home/$whoami
+    sudo mv /home/$username/.ssh/id_rsa  /home/test
     # Pipe  public key to authorized_keys
     cat /home/$username/.ssh/id_rsa.pub >> /home/$username/.ssh/authorized_keys
-    #sudo chown -R $username:$username /home/$username/.ssh 
+    # Change ownership of the .ssh folder for security
+    sudo chown -R $username:$username /home/$username/.ssh 
+    #Restrict Access to Home Folder   
+    
     echo "User $username has been created"
 
  fi
