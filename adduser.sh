@@ -26,8 +26,7 @@ echo "Checking if user exists..."
     cat /home/$username/.ssh/id_rsa.pub >> /home/$username/.ssh/authorized_keys
     # Change ownership of the .ssh folder for security
     sudo chown -R $username:$username /home/$username/.ssh 
-    #Restrict Access to Home Folder   
-    
+        
     echo "User $username has been created"
 
  fi
