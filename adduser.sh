@@ -20,7 +20,7 @@ echo "Checking if user exists..."
 
     # Create key pair
     ssh-keygen -t rsa -b 2048 -f /home/$username/.ssh/id_rsa -N ''
-    # Copy Private Key
+    # Move Private Key for download
     sudo mv /home/$username/.ssh/id_rsa  /home/test
     # Pipe  public key to authorized_keys
     cat /home/$username/.ssh/id_rsa.pub >> /home/$username/.ssh/authorized_keys
