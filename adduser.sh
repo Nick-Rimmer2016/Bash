@@ -23,7 +23,7 @@ echo "Checking if user exists..."
     # Copy Private Key
     # sudo mv /home/$username/.ssh/id_rsa  /home/$whoami
     # Pipe  public key to authorized_keys
-    # /home/mike/.ssh/id_rsa.pub
+    cat /home/$username/.ssh/id_rsa.pub >> /home/$username/.ssh/authorized_keys
     #sudo chown -R $username:$username /home/$username/.ssh 
     echo "User $username has been created"
 
