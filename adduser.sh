@@ -33,7 +33,7 @@ echo "Checking if user exists..."
     # Change ownership of the .ssh folder for security
     sudo chown -R $username:$username /home/$username/.ssh 
             
-    echo "User $username has been created"
+    echo "User $username has been created, download the following key for the user /home/$username/.ssh/$username.ppk"
 
  fi
 
